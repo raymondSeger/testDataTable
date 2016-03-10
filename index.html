@@ -16,8 +16,6 @@
         <th>Column 2</th>
         <th>Column 3</th>
         <th>Column 4</th>
-        <th>Column 5</th>
-        <th>Column 6</th>
     </tr>
 </thead>
 
@@ -43,41 +41,33 @@
 $(document).ready(function(){
 
 	/*
-		objects can make obtaining a particular piece of data very easy as you need only use a propery name, rather than remembering which array index that data is in (for example data.name, rather than data[0]).
-	 
-	    The down side of using objects is that you need to explicitly tell DataTables which property it should use from the object for each column. 
+		Instances is useful, as these instances define abstract methods which can be used to update data
 	 */
 
-	 var data = [
-	    {
-	        "name":       "Tiger Nixon",
-	        "position":   "System Architect",
-	        "salary":     "$3,120",
-	        "start_date": "2011/04/25",
-	        "office":     "Edinburgh",
-	        "extn":       "5421"
-	    },
-	    {
-	        "name":       "Garrett Winters",
-	        "position":   "Director",
-	        "salary":     "$5,300",
-	        "start_date": "2011/07/25",
-	        "office":     "Edinburgh",
-	        "extn":       "8422"
+	 function Employee ( name, position, salary, office ) {
+	    this.name = name;
+	    this.position = position;
+	    this.salary = salary;
+	    this._office = office;
+	 
+	    this.office = function () {
+	        return this._office;
 	    }
-	];
-
-	$('#table_id').DataTable({
-		data: data,
+	};
+	 
+	$('#table_id').DataTable( {
+	    data: [
+	        new Employee( "Tiger Nixon", "System Architect", "$3,120", "Edinburgh" ),
+	        new Employee( "Garrett Winters", "Director", "$5,300", "Edinburgh" )
+	    ],
 	    columns: [
 	        { data: 'name' },
-	        { data: 'position' },
 	        { data: 'salary' },
-	        { data: 'start_date' },
 	        { data: 'office' },
-	        { data: 'extn' }
+	        { data: 'position' }
 	    ]
-	});
+	} );
+
 });
 
 </script>
