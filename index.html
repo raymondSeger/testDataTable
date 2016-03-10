@@ -41,32 +41,15 @@
 $(document).ready(function(){
 
 	/*
-		Instances is useful, as these instances define abstract methods which can be used to update data
-	 */
+	Datatable can get data from the DOM (see the TR values in THEAD and TBODY)
+	or from AJAX call
 
-	 function Employee ( name, position, salary, office ) {
-	    this.name = name;
-	    this.position = position;
-	    this.salary = salary;
-	    this._office = office;
-	 
-	    this.office = function () {
-	        return this._office;
-	    }
-	};
-	 
-	$('#table_id').DataTable( {
-	    data: [
-	        new Employee( "Tiger Nixon", "System Architect", "$3,120", "Edinburgh" ),
-	        new Employee( "Garrett Winters", "Director", "$5,300", "Edinburgh" )
-	    ],
-	    columns: [
-	        { data: 'name' },
-	        { data: 'salary' },
-	        { data: 'office' },
-	        { data: 'position' }
-	    ]
-	} );
+	DataTables can also make use of HTML5 data-* attributes. For example you might have a column with a date formatted such as "21st November 2016". Browsers will struggle to sort that, but you could provide a data-order attribute as part of the HTML for the cell which contains a timestamp that can be easily sorted upon. Extending that, search data can be provided using data-search:
+
+	<td data-search="21st November 2016 21/11/2016" data-order="1479686400">
+	    21st November 2016
+	</td>
+	 */
 
 });
 
