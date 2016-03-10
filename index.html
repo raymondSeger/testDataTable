@@ -22,26 +22,7 @@
 </thead>
 
 <tbody>
-    <tr>
-        
-	    <td data-search="Tiger Nixon">T. Nixon</td>
-	    <td>System Architect</td>
-	    <td>Edinburgh</td>
-	    <td>61</td>
-	    <td data-order="1303682400">Mon 25th Apr 11</td>
-	    <td data-order="3120" data-search="3120">$3,120/m</td>
-
-    </tr>
-    <tr>
-
-        <td data-search="Raymond Seger">R. Seger</td>
-	    <td>System Architect</td>
-	    <td>Edinburgh</td>
-	    <td>61</td>
-	    <td data-order="1303682400">Mon 25th Apr 11</td>
-	    <td data-order="5555" data-search="5555">$5,555/m</td>
-
-    </tr>
+   
 </tbody>
 
 </table>
@@ -54,12 +35,22 @@
 
 $(document).ready(function(){
 
-	// you can set the search and order data through HTML5 data set, or others ways
-	// https://datatables.net/manual/data/orthogonal-data
-	
+	// AJAX example
+	// https://datatables.net/manual/ajax
+
+
 	$('#table_id').DataTable( {
-	    
+	    "ajax": 'api/myData.json',
+	    columns: [
+	        { data: 'name' },
+	        { data: 'position' },
+	        { data: 'salary' },
+	        { data: 'state_date' },
+	        { data: 'office' },
+	        { data: 'extn' }
+	    ]
 	} );
+
 
 });
 
