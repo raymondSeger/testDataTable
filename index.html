@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>DataTable</title>
 	<link rel="stylesheet" href="assets/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="assets/buttons.dataTables.min.css">
 </head>
 <body>
 	
@@ -30,7 +31,7 @@
 
 <script src="assets/jquery-1.12.1.min.js"></script>
 <script src="assets/jquery.dataTables.min.js"></script>
-
+<script src="assets/dataTables.buttons.min.js"></script>
 <script>
 
 $(document).ready(function(){
@@ -63,7 +64,17 @@ $(document).ready(function(){
 
 	var table = $('#table_id').DataTable({
 		data: data,
-		render: $.fn.dataTable.render.text()
+		dom: 'Bfrtip',
+        buttons: [
+            {
+                text: 'My button',
+                action: function ( e, dt, node, config ) {
+                    alert( 'Button activated' );
+                }
+            }
+        ]
+
+
 	});
 
 
