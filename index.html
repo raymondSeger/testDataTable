@@ -35,21 +35,231 @@
 
 $(document).ready(function(){
 
-	// AJAX example
-	// https://datatables.net/manual/ajax
 
+	var data = [
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Garrett Winters",
+	        "Director",
+	        "Edinburgh",
+	        "8422",
+	        "2011/07/25",
+	        "$5,300"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],[
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
 
-	$('#table_id').DataTable( {
-	    "ajax": 'api/myData.json',
-	    columns: [
-	        { data: 'name' },
-	        { data: 'position' },
-	        { data: 'salary' },
-	        { data: 'state_date' },
-	        { data: 'office' },
-	        { data: 'extn' }
-	    ]
+	    [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	]
+
+	// Disable search and ordering by default
+	$.extend( $.fn.dataTable.defaults, {
+	    searching: false,
+	    ordering:  false
 	} );
+
+
+	$('#table_id').DataTable({
+		data: data,
+		paging: false,
+		scrollY: 400
+	});
+
 
 
 });
