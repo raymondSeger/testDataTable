@@ -8,16 +8,16 @@
 </head>
 <body>
 	
-<table id="table_id">
+<table id="table_id" class="hover stripe cell-border order-column">
 
 <thead>
     <tr>
-        <th>Column 1</th>
-        <th>Column 2</th>
-        <th>Column 3</th>
-        <th>Column 4</th>
-        <th>Column 5</th>
-        <th>Column 6</th>
+        <th class="dt-head-center">Column 1</th>
+        <th class="dt-head-center">Column 2</th>
+        <th class="dt-head-center">Column 3</th>
+        <th class="dt-head-center">Column 4</th>
+        <th class="dt-head-center">Column 5</th>
+        <th class="dt-head-center">Column 6</th>
     </tr>
 </thead>
 
@@ -53,15 +53,28 @@ $(document).ready(function(){
 	        "2011/07/25",
 	        "$5,300"
 	    ],
+	     [
+	        "Tiger Nixon",
+	        "System Architect",
+	        "Edinburgh",
+	        "5421",
+	        "2011/04/25",
+	        "$3,120"
+	    ],
+	    [
+	        "Garrett Winters",
+	        "Director",
+	        "Edinburgh",
+	        "8422",
+	        "2011/07/25",
+	        "$5,300"
+	    ],
 	]
 
 
 	var table = $('#table_id').DataTable({
 		data: data,
 	});
-
-	table.search( 'Nixon' );
-	table.draw();
 
 });
 
